@@ -31,6 +31,11 @@ public class EmployeeController {
                 objectMapper.convertValue(employee, com.nagarro.springazure.entity.Employee.class));
     }*/
 
+    @GetMapping("/")
+    public String getMessage() {
+        return "Hello There";
+    }
+
     @GetMapping("/employee")
     public List<Employee> getEmployees() {
         return repository.findAll();
